@@ -9,9 +9,27 @@
     url: 'https://tecscripts.com'
   };
 
+  // Detect if we're in a subdirectory (GitHub Pages)
+  const getBasePath = () => {
+    const path = window.location.pathname;
+    // If path ends with .html, remove it
+    if (path.includes('.html')) {
+      return path.substring(0, path.lastIndexOf('/') + 1);
+    }
+    // If path has a trailing slash, it might be a subdirectory
+    if (path.endsWith('/') && path !== '/') {
+      return path;
+    }
+    // Get the directory of the current file
+    return path.substring(0, path.lastIndexOf('/') + 1);
+  };
+
+  const BASE_PATH = getBasePath();
+  const IS_SUBDIRECTORY = BASE_PATH !== '/';
+
   const HEADER_HTML = `
     <div class="header-inner">
-      <a href="./" class="logo">
+      <a href="${BASE_PATH}" class="logo">
         <span class="logo-icon">TS</span>
         <span class="logo-text">Tecscripts<span class="logo-accent"> Digital</span></span>
       </a>
@@ -24,34 +42,34 @@
       
       <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
-          <li><a href="./" data-nav="index">Home</a></li>
-          <li><a href="./about" data-nav="about">About</a></li>
+          <li><a href="${BASE_PATH}" data-nav="index">Home</a></li>
+          <li><a href="${BASE_PATH}about" data-nav="about">About</a></li>
           <li class="has-dropdown">
-            <a href="./services" data-nav="services">Services</a>
+            <a href="${BASE_PATH}services" data-nav="services">Services</a>
             <ul class="dropdown">
               <li class="dropdown-header">Digital Marketing</li>
-              <li><a href="./seo-services" data-nav="seo-services">SEO Services</a></li>
-              <li><a href="./google-business-profile" data-nav="google-business-profile">Google Business Profile</a></li>
-              <li><a href="./local-seo" data-nav="local-seo">Local SEO</a></li>
-              <li><a href="./social-media-marketing" data-nav="social-media-marketing">Social Media Marketing</a></li>
-              <li><a href="./social-media-management" data-nav="social-media-management">Social Media Management</a></li>
-              <li><a href="./marketing-consultation" data-nav="marketing-consultation">Marketing Consultation</a></li>
+              <li><a href="${BASE_PATH}seo-services" data-nav="seo-services">SEO Services</a></li>
+              <li><a href="${BASE_PATH}google-business-profile" data-nav="google-business-profile">Google Business Profile</a></li>
+              <li><a href="${BASE_PATH}local-seo" data-nav="local-seo">Local SEO</a></li>
+              <li><a href="${BASE_PATH}social-media-marketing" data-nav="social-media-marketing">Social Media Marketing</a></li>
+              <li><a href="${BASE_PATH}social-media-management" data-nav="social-media-management">Social Media Management</a></li>
+              <li><a href="${BASE_PATH}marketing-consultation" data-nav="marketing-consultation">Marketing Consultation</a></li>
               <li class="dropdown-divider"></li>
               <li class="dropdown-header">Web Development</li>
-              <li><a href="./website-development" data-nav="website-development">Website Development</a></li>
-              <li><a href="./web-application-development" data-nav="web-application-development">Web Application Development</a></li>
-              <li><a href="./laravel-development" data-nav="laravel-development">Laravel Development</a></li>
-              <li><a href="./frontend-development" data-nav="frontend-development">Frontend Development</a></li>
-              <li><a href="./api-development" data-nav="api-development">API Development</a></li>
-              <li><a href="./website-maintenance" data-nav="website-maintenance">Website Maintenance</a></li>
+              <li><a href="${BASE_PATH}website-development" data-nav="website-development">Website Development</a></li>
+              <li><a href="${BASE_PATH}web-application-development" data-nav="web-application-development">Web Application Development</a></li>
+              <li><a href="${BASE_PATH}laravel-development" data-nav="laravel-development">Laravel Development</a></li>
+              <li><a href="${BASE_PATH}frontend-development" data-nav="frontend-development">Frontend Development</a></li>
+              <li><a href="${BASE_PATH}api-development" data-nav="api-development">API Development</a></li>
+              <li><a href="${BASE_PATH}website-maintenance" data-nav="website-maintenance">Website Maintenance</a></li>
             </ul>
           </li>
-          <li><a href="./portfolio" data-nav="portfolio">Portfolio</a></li>
-          <li><a href="./industries" data-nav="industries">Industries</a></li>
-          <li><a href="./testimonials" data-nav="testimonials">Testimonials</a></li>
-          <li><a href="./blog" data-nav="blog">Blog</a></li>
-          <li><a href="./faq" data-nav="faq">FAQ</a></li>
-          <li><a href="./contact" class="nav-cta" data-nav="contact">Contact</a></li>
+          <li><a href="${BASE_PATH}portfolio" data-nav="portfolio">Portfolio</a></li>
+          <li><a href="${BASE_PATH}industries" data-nav="industries">Industries</a></li>
+          <li><a href="${BASE_PATH}testimonials" data-nav="testimonials">Testimonials</a></li>
+          <li><a href="${BASE_PATH}blog" data-nav="blog">Blog</a></li>
+          <li><a href="${BASE_PATH}faq" data-nav="faq">FAQ</a></li>
+          <li><a href="${BASE_PATH}contact" class="nav-cta" data-nav="contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -61,7 +79,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="./" class="footer-logo">
+          <a href="${BASE_PATH}" class="footer-logo">
             <span class="logo-icon">TS</span>
             <span class="logo-text">Tecscripts<span class="logo-accent"> Digital</span></span>
           </a>
@@ -77,37 +95,37 @@
         <div class="footer-links">
           <h4>Digital Marketing</h4>
           <ul>
-            <li><a href="./seo-services">SEO Services</a></li>
-            <li><a href="./google-business-profile">Google Business Profile</a></li>
-            <li><a href="./local-seo">Local SEO</a></li>
-            <li><a href="./social-media-marketing">Social Media Marketing</a></li>
-            <li><a href="./social-media-management">Social Media Management</a></li>
-            <li><a href="./marketing-consultation">Marketing Consultation</a></li>
+            <li><a href="${BASE_PATH}seo-services">SEO Services</a></li>
+            <li><a href="${BASE_PATH}google-business-profile">Google Business Profile</a></li>
+            <li><a href="${BASE_PATH}local-seo">Local SEO</a></li>
+            <li><a href="${BASE_PATH}social-media-marketing">Social Media Marketing</a></li>
+            <li><a href="${BASE_PATH}social-media-management">Social Media Management</a></li>
+            <li><a href="${BASE_PATH}marketing-consultation">Marketing Consultation</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
           <h4>Web Development</h4>
           <ul>
-            <li><a href="./website-development">Website Development</a></li>
-            <li><a href="./web-application-development">Web Application Development</a></li>
-            <li><a href="./laravel-development">Laravel Development</a></li>
-            <li><a href="./frontend-development">Frontend Development</a></li>
-            <li><a href="./api-development">API Development</a></li>
-            <li><a href="./website-maintenance">Website Maintenance</a></li>
+            <li><a href="${BASE_PATH}website-development">Website Development</a></li>
+            <li><a href="${BASE_PATH}web-application-development">Web Application Development</a></li>
+            <li><a href="${BASE_PATH}laravel-development">Laravel Development</a></li>
+            <li><a href="${BASE_PATH}frontend-development">Frontend Development</a></li>
+            <li><a href="${BASE_PATH}api-development">API Development</a></li>
+            <li><a href="${BASE_PATH}website-maintenance">Website Maintenance</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
-            <li><a href="./about">About Us</a></li>
-            <li><a href="./portfolio">Portfolio</a></li>
-            <li><a href="./industries">Industries</a></li>
-            <li><a href="./testimonials">Testimonials</a></li>
-            <li><a href="./blog">Blog</a></li>
-            <li><a href="./faq">FAQ</a></li>
-            <li><a href="./contact">Contact</a></li>
+            <li><a href="${BASE_PATH}about">About Us</a></li>
+            <li><a href="${BASE_PATH}portfolio">Portfolio</a></li>
+            <li><a href="${BASE_PATH}industries">Industries</a></li>
+            <li><a href="${BASE_PATH}testimonials">Testimonials</a></li>
+            <li><a href="${BASE_PATH}blog">Blog</a></li>
+            <li><a href="${BASE_PATH}faq">FAQ</a></li>
+            <li><a href="${BASE_PATH}contact">Contact</a></li>
           </ul>
         </div>
         
@@ -141,6 +159,19 @@
     </div>
   `;
 
+  function getCleanPath(path) {
+    // Remove base path from URL
+    let cleanPath = path;
+    if (IS_SUBDIRECTORY && path.startsWith(BASE_PATH)) {
+      cleanPath = path.substring(BASE_PATH.length - 1);
+    }
+    // Remove trailing slash
+    if (cleanPath.endsWith('/') && cleanPath !== '/') {
+      cleanPath = cleanPath.slice(0, -1);
+    }
+    return cleanPath;
+  }
+
   function initCleanURLRouter() {
     document.body.addEventListener('click', (e) => {
       const link = e.target.closest('a');
@@ -153,58 +184,81 @@
         return;
       }
       
-      if (!href.includes('.html') && href !== './' && href !== '' && href !== '.') {
-        e.preventDefault();
-        navigateToPage(href);
+      // Skip if it has .html extension
+      if (href.includes('.html')) {
+        return;
       }
+      
+      // Skip if it's the base path itself
+      if (href === BASE_PATH || href === './' || href === '.') {
+        return;
+      }
+      
+      e.preventDefault();
+      navigateToPage(href);
     });
     
     const currentPath = window.location.pathname;
-    const fileName = currentPath.split('/').pop();
+    const cleanPath = getCleanPath(currentPath);
     
-    if (fileName === 'index.html') {
+    // Handle index.html redirect
+    if (currentPath.endsWith('index.html')) {
       const newPath = currentPath.replace('index.html', '');
       window.history.replaceState(null, '', newPath);
+      return;
     }
     
-    if (fileName && fileName.includes('.html') && fileName !== 'index.html') {
-      const cleanUrl = currentPath.replace('.html', '');
-      window.history.replaceState(null, '', cleanUrl);
-      loadPageContent(cleanUrl);
+    // If it's a clean URL, load content
+    if (!cleanPath.includes('.html') && cleanPath !== '' && cleanPath !== '/') {
+      loadPageContent(cleanPath);
     }
+    
+    window.addEventListener('popstate', () => {
+      const newPath = window.location.pathname;
+      const newCleanPath = getCleanPath(newPath);
+      loadPageContent(newCleanPath);
+    });
   }
   
   function navigateToPage(url) {
-    let cleanUrl = url;
-    if (cleanUrl.startsWith('./')) {
-      cleanUrl = cleanUrl.substring(1);
+    // Extract the page name from URL
+    let pageName = url;
+    
+    // Remove base path if present
+    if (pageName.startsWith(BASE_PATH)) {
+      pageName = pageName.substring(BASE_PATH.length);
     }
-    if (!cleanUrl.startsWith('/')) {
-      cleanUrl = '/' + cleanUrl;
+    
+    // Remove leading slash
+    if (pageName.startsWith('/')) {
+      pageName = pageName.substring(1);
     }
-    window.history.pushState(null, '', cleanUrl);
-    loadPageContent(cleanUrl);
+    
+    // Remove trailing slash
+    if (pageName.endsWith('/')) {
+      pageName = pageName.slice(0, -1);
+    }
+    
+    // Clean up
+    pageName = pageName.replace(/^\.\//, '');
+    
+    const fullUrl = BASE_PATH + pageName;
+    window.history.pushState(null, '', fullUrl);
+    loadPageContent(pageName);
   }
   
-  function loadPageContent(cleanUrl) {
-    let htmlPath = cleanUrl;
+  function loadPageContent(pageName) {
+    let htmlPath = pageName;
     
-    if (htmlPath === '/' || htmlPath === '' || htmlPath === './') {
-      htmlPath = '/index.html';
+    if (htmlPath === '' || htmlPath === '/' || htmlPath === 'index') {
+      htmlPath = 'index.html';
     } else {
-      if (htmlPath.endsWith('/')) {
-        htmlPath = htmlPath.slice(0, -1);
-      }
       htmlPath = htmlPath + '.html';
-    }
-    
-    if (htmlPath.startsWith('/')) {
-      htmlPath = htmlPath.substring(1);
     }
     
     fetch(htmlPath)
       .then(response => {
-        if (!response.ok) throw new Error('Page not found');
+        if (!response.ok) throw new Error('Page not found: ' + htmlPath);
         return response.text();
       })
       .then(html => {
@@ -379,7 +433,14 @@
   }
 
   function highlightActiveNav() {
-    let currentPath = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+    let currentPath = window.location.pathname;
+    
+    // Remove base path
+    if (IS_SUBDIRECTORY && currentPath.startsWith(BASE_PATH)) {
+      currentPath = currentPath.substring(BASE_PATH.length - 1);
+    }
+    
+    currentPath = currentPath.replace(/^\//, '').replace(/\/$/, '');
     
     if (currentPath === '' || currentPath === '/') {
       currentPath = 'index';
