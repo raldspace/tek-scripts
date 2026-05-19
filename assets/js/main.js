@@ -11,7 +11,7 @@
 
   const HEADER_HTML = `
     <div class="header-inner">
-      <a href="/" class="logo">
+      <a href="./" class="logo">
         <span class="logo-icon">TS</span>
         <span class="logo-text">Tecscripts<span class="logo-accent"> Digital</span></span>
       </a>
@@ -24,34 +24,34 @@
       
       <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
-          <li><a href="/" data-nav="index">Home</a></li>
-          <li><a href="/about" data-nav="about">About</a></li>
+          <li><a href="./" data-nav="index">Home</a></li>
+          <li><a href="./about" data-nav="about">About</a></li>
           <li class="has-dropdown">
-            <a href="/services" data-nav="services">Services</a>
+            <a href="./services" data-nav="services">Services</a>
             <ul class="dropdown">
               <li class="dropdown-header">Digital Marketing</li>
-              <li><a href="/seo-services" data-nav="seo-services">SEO Services</a></li>
-              <li><a href="/google-business-profile" data-nav="google-business-profile">Google Business Profile</a></li>
-              <li><a href="/local-seo" data-nav="local-seo">Local SEO</a></li>
-              <li><a href="/social-media-marketing" data-nav="social-media-marketing">Social Media Marketing</a></li>
-              <li><a href="/social-media-management" data-nav="social-media-management">Social Media Management</a></li>
-              <li><a href="/marketing-consultation" data-nav="marketing-consultation">Marketing Consultation</a></li>
+              <li><a href="./seo-services" data-nav="seo-services">SEO Services</a></li>
+              <li><a href="./google-business-profile" data-nav="google-business-profile">Google Business Profile</a></li>
+              <li><a href="./local-seo" data-nav="local-seo">Local SEO</a></li>
+              <li><a href="./social-media-marketing" data-nav="social-media-marketing">Social Media Marketing</a></li>
+              <li><a href="./social-media-management" data-nav="social-media-management">Social Media Management</a></li>
+              <li><a href="./marketing-consultation" data-nav="marketing-consultation">Marketing Consultation</a></li>
               <li class="dropdown-divider"></li>
               <li class="dropdown-header">Web Development</li>
-              <li><a href="/website-development" data-nav="website-development">Website Development</a></li>
-              <li><a href="/web-application-development" data-nav="web-application-development">Web Application Development</a></li>
-              <li><a href="/laravel-development" data-nav="laravel-development">Laravel Development</a></li>
-              <li><a href="/frontend-development" data-nav="frontend-development">Frontend Development</a></li>
-              <li><a href="/api-development" data-nav="api-development">API Development</a></li>
-              <li><a href="/website-maintenance" data-nav="website-maintenance">Website Maintenance</a></li>
+              <li><a href="./website-development" data-nav="website-development">Website Development</a></li>
+              <li><a href="./web-application-development" data-nav="web-application-development">Web Application Development</a></li>
+              <li><a href="./laravel-development" data-nav="laravel-development">Laravel Development</a></li>
+              <li><a href="./frontend-development" data-nav="frontend-development">Frontend Development</a></li>
+              <li><a href="./api-development" data-nav="api-development">API Development</a></li>
+              <li><a href="./website-maintenance" data-nav="website-maintenance">Website Maintenance</a></li>
             </ul>
           </li>
-          <li><a href="/portfolio" data-nav="portfolio">Portfolio</a></li>
-          <li><a href="/industries" data-nav="industries">Industries</a></li>
-          <li><a href="/testimonials" data-nav="testimonials">Testimonials</a></li>
-          <li><a href="/blog" data-nav="blog">Blog</a></li>
-          <li><a href="/faq" data-nav="faq">FAQ</a></li>
-          <li><a href="/contact" class="nav-cta" data-nav="contact">Contact</a></li>
+          <li><a href="./portfolio" data-nav="portfolio">Portfolio</a></li>
+          <li><a href="./industries" data-nav="industries">Industries</a></li>
+          <li><a href="./testimonials" data-nav="testimonials">Testimonials</a></li>
+          <li><a href="./blog" data-nav="blog">Blog</a></li>
+          <li><a href="./faq" data-nav="faq">FAQ</a></li>
+          <li><a href="./contact" class="nav-cta" data-nav="contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -61,7 +61,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="footer-logo">
+          <a href="./" class="footer-logo">
             <span class="logo-icon">TS</span>
             <span class="logo-text">Tecscripts<span class="logo-accent"> Digital</span></span>
           </a>
@@ -77,37 +77,37 @@
         <div class="footer-links">
           <h4>Digital Marketing</h4>
           <ul>
-            <li><a href="/seo-services">SEO Services</a></li>
-            <li><a href="/google-business-profile">Google Business Profile</a></li>
-            <li><a href="/local-seo">Local SEO</a></li>
-            <li><a href="/social-media-marketing">Social Media Marketing</a></li>
-            <li><a href="/social-media-management">Social Media Management</a></li>
-            <li><a href="/marketing-consultation">Marketing Consultation</a></li>
+            <li><a href="./seo-services">SEO Services</a></li>
+            <li><a href="./google-business-profile">Google Business Profile</a></li>
+            <li><a href="./local-seo">Local SEO</a></li>
+            <li><a href="./social-media-marketing">Social Media Marketing</a></li>
+            <li><a href="./social-media-management">Social Media Management</a></li>
+            <li><a href="./marketing-consultation">Marketing Consultation</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
           <h4>Web Development</h4>
           <ul>
-            <li><a href="/website-development">Website Development</a></li>
-            <li><a href="/web-application-development">Web Application Development</a></li>
-            <li><a href="/laravel-development">Laravel Development</a></li>
-            <li><a href="/frontend-development">Frontend Development</a></li>
-            <li><a href="/api-development">API Development</a></li>
-            <li><a href="/website-maintenance">Website Maintenance</a></li>
+            <li><a href="./website-development">Website Development</a></li>
+            <li><a href="./web-application-development">Web Application Development</a></li>
+            <li><a href="./laravel-development">Laravel Development</a></li>
+            <li><a href="./frontend-development">Frontend Development</a></li>
+            <li><a href="./api-development">API Development</a></li>
+            <li><a href="./website-maintenance">Website Maintenance</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/industries">Industries</a></li>
-            <li><a href="/testimonials">Testimonials</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="./about">About Us</a></li>
+            <li><a href="./portfolio">Portfolio</a></li>
+            <li><a href="./industries">Industries</a></li>
+            <li><a href="./testimonials">Testimonials</a></li>
+            <li><a href="./blog">Blog</a></li>
+            <li><a href="./faq">FAQ</a></li>
+            <li><a href="./contact">Contact</a></li>
           </ul>
         </div>
         
@@ -153,35 +153,35 @@
         return;
       }
       
-      if (!href.includes('.html') && href !== '/' && href !== '') {
+      if (!href.includes('.html') && href !== './' && href !== '' && href !== '.') {
         e.preventDefault();
         navigateToPage(href);
       }
     });
     
     const currentPath = window.location.pathname;
+    const fileName = currentPath.split('/').pop();
     
-    if (currentPath === '/index.html') {
-      window.history.replaceState(null, '', '/');
+    if (fileName === 'index.html') {
+      const newPath = currentPath.replace('index.html', '');
+      window.history.replaceState(null, '', newPath);
     }
     
-    if (currentPath.includes('.html') && currentPath !== '/index.html') {
+    if (fileName && fileName.includes('.html') && fileName !== 'index.html') {
       const cleanUrl = currentPath.replace('.html', '');
       window.history.replaceState(null, '', cleanUrl);
       loadPageContent(cleanUrl);
     }
-    
-    if (!currentPath.includes('.html') && currentPath !== '/' && currentPath !== '') {
-      loadPageContent(currentPath);
-    }
-    
-    window.addEventListener('popstate', () => {
-      loadPageContent(window.location.pathname);
-    });
   }
   
   function navigateToPage(url) {
-    const cleanUrl = url.startsWith('/') ? url : '/' + url;
+    let cleanUrl = url;
+    if (cleanUrl.startsWith('./')) {
+      cleanUrl = cleanUrl.substring(1);
+    }
+    if (!cleanUrl.startsWith('/')) {
+      cleanUrl = '/' + cleanUrl;
+    }
     window.history.pushState(null, '', cleanUrl);
     loadPageContent(cleanUrl);
   }
@@ -189,13 +189,17 @@
   function loadPageContent(cleanUrl) {
     let htmlPath = cleanUrl;
     
-    if (htmlPath === '/' || htmlPath === '') {
+    if (htmlPath === '/' || htmlPath === '' || htmlPath === './') {
       htmlPath = '/index.html';
     } else {
       if (htmlPath.endsWith('/')) {
         htmlPath = htmlPath.slice(0, -1);
       }
       htmlPath = htmlPath + '.html';
+    }
+    
+    if (htmlPath.startsWith('/')) {
+      htmlPath = htmlPath.substring(1);
     }
     
     fetch(htmlPath)
@@ -240,7 +244,7 @@
     initTabs();
     initParallax();
     initSmoothScroll();
-    // Re-initialize dropdown handlers on new content
+    
     if (window.innerWidth <= 1024) {
       const nav = document.getElementById('mainNav');
       if (nav) {
@@ -283,36 +287,68 @@
       return;
     }
 
-    // Remove any existing listeners
     const newBtn = btn.cloneNode(true);
     btn.parentNode.replaceChild(newBtn, btn);
     
-    // Reset states
     newBtn.classList.remove('active');
     nav.classList.remove('active');
     document.body.classList.remove('nav-open');
     
-    // Mobile menu toggle
+    let originalBodyOverflow = '';
+    let originalBodyPosition = '';
+    let originalBodyWidth = '';
+    let originalBodyHeight = '';
+    
+    function openMenu() {
+      originalBodyOverflow = document.body.style.overflow;
+      originalBodyPosition = document.body.style.position;
+      originalBodyWidth = document.body.style.width;
+      originalBodyHeight = document.body.style.height;
+      
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.height = '100%';
+      
+      newBtn.classList.add('active');
+      nav.classList.add('active');
+      document.body.classList.add('nav-open');
+    }
+    
+    function closeMenu() {
+      document.body.style.overflow = originalBodyOverflow;
+      document.body.style.position = originalBodyPosition;
+      document.body.style.width = originalBodyWidth;
+      document.body.style.height = originalBodyHeight;
+      
+      newBtn.classList.remove('active');
+      nav.classList.remove('active');
+      document.body.classList.remove('nav-open');
+    }
+    
     newBtn.addEventListener('click', function(e) {
       e.stopPropagation();
-      newBtn.classList.toggle('active');
-      nav.classList.toggle('active');
-      document.body.classList.toggle('nav-open');
+      if (nav.classList.contains('active')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
     
-    // Close menu when clicking on nav links
     nav.querySelectorAll('.nav-list > li > a').forEach(link => {
+      const parentLi = link.parentElement;
+      const isDropdown = parentLi && parentLi.classList.contains('has-dropdown');
       const newLink = link.cloneNode(true);
       link.parentNode.replaceChild(newLink, link);
       
-      newLink.addEventListener('click', () => {
-        newBtn.classList.remove('active');
-        nav.classList.remove('active');
-        document.body.classList.remove('nav-open');
+      newLink.addEventListener('click', (e) => {
+        if (isDropdown && window.innerWidth <= 1024) {
+          return;
+        }
+        closeMenu();
       });
     });
     
-    // Handle dropdowns on mobile
     const dropdowns = nav.querySelectorAll('.has-dropdown > a');
     dropdowns.forEach(dropdownLink => {
       const newDropdownLink = dropdownLink.cloneNode(true);
@@ -327,14 +363,17 @@
       });
     });
     
-    // Close menu when clicking outside
     document.addEventListener('click', function(e) {
       if (!nav.contains(e.target) && !newBtn.contains(e.target)) {
         if (nav.classList.contains('active')) {
-          newBtn.classList.remove('active');
-          nav.classList.remove('active');
-          document.body.classList.remove('nav-open');
+          closeMenu();
         }
+      }
+    });
+    
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 1024 && nav.classList.contains('active')) {
+        closeMenu();
       }
     });
   }
